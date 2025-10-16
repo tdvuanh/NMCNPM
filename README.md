@@ -1,128 +1,99 @@
-# NHẬP MÔN CÔNG NGHỆ PHẦN MỀM
+# 🏫 HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG
 
-**INTRODUCTION TO SOFTWARE ENGINEERING** - **PTIT**
+## KHOA: CÔNG NGHỆ THÔNG TIN 2
 
----
+### Học phần: Nhập môn Công nghệ phần mềm
 
-## LAB-PRACTICES
-
-**Profile Student:** [github.com/tduyvuanh](https://github.com/tduyvuanh)
-
-- **Student Name**: Trần Duy Vũ Anh
-- **Student Id**: K23DTCN472
-- **Class**: D23TXCN06-K
-
-### XÂY DỰNG ỨNG DỤNG BÁN LẺ TẠP HÓA CÔNG NGHỆ 4.0
+**Trình độ đào tạo:** Đại học  
+**Hình thức đào tạo:** Chính quy
 
 ---
 
-## Lab 1 – Khởi tạo dự án & Định nghĩa yêu cầu
+## 🧾 THÔNG TIN ĐỀ TÀI DỰ ÁN
 
-### Nội dung:
-
-- Giới thiệu các mô hình tiến trình phần mềm (Waterfall, Incremental, Agile).
-- Định nghĩa dự án, viết Project Definition.
-- Viết Software Requirement Specification (SRS).
-
-### Bài tập:
-
-- Chọn 1 mini-project (VD: hệ thống quản lý khách sạn, quản lý thư viện…).
-- Viết Project Definition và SRS theo template.
-
-### Kết quả nộp:
-
-- File `.doc` chứa Project Definition + SRS.
+### ĐỀ TÀI SỐ 1
 
 ---
 
-## Lab 2 – Phân tích & Mô hình hóa hệ thống
+### 1. Tên đề tài **Ứng dụng ghi nhật ký món ăn (Meal Diary App)**
 
-### Nội dung:
+### 2. Số lượng sinh viên theo nhóm
 
-- Vẽ Use Case Diagram và mô tả use case.
-- Xây dựng Activity Diagram và mô tả Flow of Events.
-- Vẽ Class Diagram và Sequence Diagram.
-- Vẽ ERD và DFD.
-
-### Bài tập:
-
-- Dựa trên SRS đã làm, thiết kế:
-  - Use Case Diagram + mô tả use case.
-  - Activity Diagram cho 1 chức năng chính.
-  - Class Diagram và Sequence Diagram.
-  - ERD + DFD mức 0, mức 1.
-
-### Kết quả nộp:
-
-- File UML + hình ảnh các sơ đồ.
+**3–4 sinh viên**
 
 ---
 
-## Lab 3 – Quản lý dự án & Quản lý cấu hình
+### 3. Mô tả đề tài
 
-### Nội dung:
+#### 🎯 a. Mục tiêu
 
-- Lập Project Plan, WBS, Gantt Chart bằng Jira & Confluence.
-- Phân tích rủi ro (Risk Management).
-- Quản lý mã nguồn bằng GitHub.
+Phát triển **ứng dụng di động đa nền tảng (Android/iOS)** cho phép người dùng ghi chép, lưu trữ và theo dõi các món ăn hàng ngày.  
+Hệ thống giúp người dùng:
 
-### Bài tập:
+- Ghi lại bữa ăn, hình ảnh, và lượng calo.
+- Giúp người dùng thiết lập chế độ calo theo mục tiêu cân nặng.
+- Theo dõi thói quen ăn uống theo ngày, tuần, tháng.
+- Đưa ra gợi ý món ăn lành mạnh, cân đối dinh dưỡng.
+- Đồng bộ dữ liệu trên đám mây và hỗ trợ đăng nhập xã hội.
 
-- Tạo WBS + Gantt Chart cho dự án nhóm.
-- Tạo repo GitHub, commit các file tài liệu đã làm.
-
-### Kết quả nộp:
-
-- File PDF, link GitHub.
+Ứng dụng được phát triển theo quy trình **Agile–Scrum** hoặc **SDLC (Waterfall)**, với đầy đủ các giai đoạn: phân tích, thiết kế, phát triển, kiểm thử và triển khai.
 
 ---
 
-## Lab 4 – Thiết kế, Kiểm thử & Triển khai
+#### ⚙️ b. Chức năng chính của phần mềm
 
-### Nội dung:
-
-- Thiết kế giao diện + database diagram.
-- Ứng dụng MVC + SOA trong demo.
-- Kiểm thử đơn vị & quản lý lỗi với VS Test Tool + Mentis.
-- Tạo setup & triển khai dự án.
-
-### Bài tập:
-
-- Thiết kế UI mẫu và CSDL (SQL Server / MySQL).
-- Cài đặt một module nhỏ theo MVC.
-- Viết Unit Test và quản lý lỗi với GitHub Issues / Mentis.
-- Đóng gói setup hoặc deploy lên webserver.
-
-### Kết quả nộp:
-
-- Code trên GitHub + báo cáo test & deploy.
+- **Đăng nhập & đăng ký:** qua email hoặc social login (Google/Facebook).
+- **Nhật ký món ăn:** thêm, sửa, xóa, xem chi tiết món ăn theo ngày.
+- **Phân loại & thống kê:** thống kê lượng calo, loại thực phẩm (sáng/trưa/tối).
+- **Gợi ý món ăn:** dựa trên lịch sử ghi chép hoặc mục tiêu dinh dưỡng.
+- **Tích hợp camera & thư viện ảnh:** chụp hoặc chọn ảnh món ăn.
+- **Nhắc nhở thông minh:** gợi ý thời điểm ghi nhật ký.
+- **Đồng bộ dữ liệu:** lưu trữ qua Firebase / Cloud Database.
+- **Phản hồi & chia sẻ:** người dùng có thể gửi phản hồi, chia sẻ món ăn yêu thích.
 
 ---
 
-## Đồ án cuối khóa (Course Project)
+#### 🧪 c. Chức năng kiểm thử & đánh giá chất lượng
 
-### Yêu cầu:
-
-- Mỗi nhóm (2–3 sinh viên) phát triển một ứng dụng web theo quy trình đã học.
-- **Ví dụ đề tài:** Hệ thống Quản lý đặt phòng khách sạn trực tuyến.
-
-### Nội dung bắt buộc:
-
-1. Project Definition + SRS (tài liệu).
-2. UML Models: Use Case, Activity, Class, Sequence, ERD, DFD.
-3. Project Plan + Risk Management.
-4. Thiết kế giao diện + CSDL.
-5. Cài đặt web app (dùng MVC framework .NET / Java / PHP / Python).
-6. Quản lý cấu hình (GitHub / SVN).
-7. Testing + Report.
-8. Deploy demo (Heroku, Azure, Xampp hoặc server nội bộ).
-
-### Kết quả nộp:
-
-- Tài liệu tổng hợp (PDF).
-- Source code + DB script (GitHub).
-- Báo cáo demo & test.
+- **Kiểm thử đơn vị (Unit Test):** sử dụng Jest hoặc JUnit (tuỳ công nghệ).
+- **Kiểm thử giao diện (UI Test):** Cypress (React Native).
+- **Kiểm thử API:** bằng Postman / Mock API.
+- **Báo cáo kiểm thử:** trình bày tỷ lệ pass/fail, độ bao phủ kiểm thử, phân tích lỗi và đề xuất cải tiến.
 
 ---
 
-**--- HẾT ---**
+#### 🧰 d. Công cụ phát triển và kiểm thử (tùy chọn)
+
+| Thành phần               | Công cụ/Ngôn ngữ gợi ý                             |
+| ------------------------ | -------------------------------------------------- |
+| **Backend**              | Java Spring Boot hoặc Node.js (Express)            |
+| **Frontend**             | React Native                                       |
+| **Cơ sở dữ liệu**        | Postgresql hoặc Firebase                           |
+| **Kiểm thử**             | JUnit, Selenium, Postman, Mockito                  |
+| **IDE**                  | Visual Studio Code                                 |
+| **Quản lý mã nguồn**     | GitHub (public repo nhóm)                          |
+| **Quy trình phát triển** | Agile–Scrum, CI/CD (GitHub Actions hoặc Jenkins)   |
+| **Triển khai**           | Docker, Cloud (AWS, Render, hoặc Railway)          |
+| **Tối ưu hóa**           | Lighthouse/Core Web Vitals, Google Analytics (GA4) |
+
+---
+
+### 4. Yêu cầu nhóm và học viên
+
+- **[CLO1]:** Xây dựng ứng dụng theo phương pháp **Agile–Scrum** (xây dựng Sprint backlog, Daily Scrum, Sprint Review & Retrospective).
+- **[CLO1]:** Xác định kỹ thuật kiểm thử, demo test case minh họa.
+- **[CLO2]:** Báo cáo và trình bày (10–15 phút): mô hình hệ thống, kết quả triển khai, hạn chế và hướng phát triển.
+
+---
+
+### 👨‍🏫 Giảng viên phụ trách học phần
+
+_(ký, ghi rõ họ tên)_
+
+---
+
+### 👩‍💼 Trưởng bộ môn
+
+_(ký, ghi rõ họ tên)_
+
+---
