@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Quản lý sản phẩm – HTML + Tailwind</title>
+    <link rel="stylesheet" href="./assets/tailwind.css" />
+  </head>
+  <body class="min-h-screen bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="border-b bg-white">
+      <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
+        <h1 class="text-xl md:text-2xl font-semibold">📦 Quản lý sản phẩm</h1>
+        <button id="btnOpenCreate" class="btn">+ Thêm sản phẩm</button>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="mx-auto max-w-6xl px-4 py-6 space-y-4">
+      <!-- Toolbar -->
+      <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        <div class="flex items-center gap-3">
+          <input
+            id="searchInput"
+            class="rounded-xl border px-3 py-2 w-64"
+            type="text"
+            placeholder="Tìm theo tên, SKU, danh mục…" />
+          <select id="categoryFilter" class="rounded-xl border px-3 py-2">
+            <option value="">Tất cả danh mục</option>
+          </select>
+        </div>
+        <div class="text-sm text-gray-500">
+          Tổng: <span id="totalCount" class="font-semibold">0</span> sản phẩm
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="overflow-x-auto rounded-xl border bg-white">
+        <table class="min-w-full text-sm">
+          <thead class="bg-gray-100 text-gray-700">
+            <tr>
+              <th class="px-4 py-3 text-left w-[120px]">SKU</th>
+              <th class="px-4 py-3 text-left">Tên</th>
+              <th class="px-4 py-3 text-right w-[140px]">Giá (₫)</th>
+              <th class="px-4 py-3 text-right w-[110px]">Tồn kho</th>
+              <th class="px-4 py-3 text-left w-[160px]">Danh mục</th>
+              <th class="px-4 py-3 text-right w-[160px]">Thao tác</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody" class="divide-y"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <!-- Modal (Create / Edit) -->
+    <div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center">
+      <div class="absolute inset-0 bg-black/40" data-close="1"></div>
+      <div class="relative z-10 w-full max-w-xl place-self-center">
+        <div class="rounded-2xl bg-white shadow-lg border">
+          <div class="flex items-center justify-between px-5 py-4 border-b">
+            <h2 id="modalTitle" class="text-lg font-semibold">Thêm sản phẩm</h2>
+            <button class="rounded-lg p-2 hover:bg-gray-100" data-close="1" aria-label="Đóng">✕</button>
+          </div>
+          <form id="productForm" class="px-5 py-4 space-y-4">
+            <input type="hidden" id="formId" />
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm mb-1" for="formSku">SKU</label>
+                <input id="formSku" class="w-full rounded-xl border px-3 py-2" placeholder="VD: SP-001" required />
+              </div>
+              <div>
+                <label class="block text-sm mb-1" for="formName">Tên sản phẩm</label>
+                <input id="formName" class="w-full rounded-xl border px-3 py-2" placeholder="Tên…" required />
+              </div>
+              <div>
+                <label class="block text-sm mb-1" for="formPrice">Giá (₫)</label>
+                <input id="formPrice" type="number" min="0" step="1000" class="w-full rounded-xl border px-3 py-2" placeholder="0" required />
+              </div>
+              <div>
+                <label class="block text-sm mb-1" for="formStock">Tồn kho</label>
+                <input id="formStock" type="number" min="0" step="1" class="w-full rounded-xl border px-3 py-2" placeholder="0" required />
+              </div>
+              <div class="md:col-span-2">
+                <label class="block text-sm mb-1" for="formCategory">Danh mục</label>
+                <input id="formCategory" class="w-full rounded-xl border px-3 py-2" placeholder="VD: Điện thoại / Laptop…" />
+              </div>
+              <div class="md:col-span-2">
+                <label class="block text-sm mb-1" for="formDesc">Mô tả (tuỳ chọn)</label>
+                <textarea id="formDesc" rows="3" class="w-full rounded-xl border px-3 py-2" placeholder="Mô tả ngắn…"></textarea>
+              </div>
+            </div>
+            <div class="flex items-center justify-end gap-2 pt-2">
+              <button type="button" class="rounded-xl border px-4 py-2" data-close="1">Huỷ</button>
+              <button type="submit" class="btn">Lưu</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="fixed bottom-4 right-4 z-50 hidden">
+      <div class="rounded-xl bg-gray-900 text-white px-4 py-2 shadow-lg text-sm" id="toastMsg">Đã lưu</div>
+    </div>
+
+    <script src="./assets/app.js"></script>
+  </body>
+</html>
